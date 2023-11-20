@@ -1,11 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using DesignPattern.Structrual._01_Decorator.DecoratorVsInheritance;
-using DesignPattern.Structrual._01_Decorator.DecoratorVsInheritance.WithDecorator;
-using DesignPattern.Structrual._01_Decorator.WithAbstraction;
-using DesignPattern.Structrual._02_Facade;
-using DesignPattern.Structrual._03_Bridge.BaseStructure;
-using DesignPattern.Structrual._03_Bridge.Example;
+using DesignPattern.Structural._01_Decorator.DecoratorVsInheritance;
+using DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithDecorator;
+using DesignPattern.Structural._01_Decorator.WithAbstraction;
+using DesignPattern.Structural._02_Facade;
+using DesignPattern.Structural._03_Bridge.BaseStructure;
+using DesignPattern.Structural._03_Bridge.Example;
+using DesignPattern.Structural._04_Proxy;
 
 #region Decorator
 Component decorator_obj = new ConcreteComponent();
@@ -22,10 +23,9 @@ borderWindow.Draw();
 
 
 #region Facade
-Facade facade=new Facade();
+Facade facade = new Facade();
 facade.DoActions();
 #endregion
-
 
 #region Bridge
 //Abstraction abstraction = new RefinedAbstraction();
@@ -38,7 +38,12 @@ facade.DoActions();
 //    To="sdfsd",
 //    Subject="sdfsd"
 //});
-
 #endregion
 
-Console.ReadLine();
+#region Proxy
+RealSubjectProxy ob = new RealSubjectProxy();
+if (1==1)
+    ob.DoAction();
+#endregion
+
+Console.ReadKey();

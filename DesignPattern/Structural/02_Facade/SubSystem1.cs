@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern.Structrual._02_Facade
+namespace DesignPattern.Structural._02_Facade
 {
     public class SubSystem1
     {

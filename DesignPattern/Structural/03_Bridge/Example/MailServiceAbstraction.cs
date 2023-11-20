@@ -1,4 +1,4 @@
-﻿namespace DesignPattern.Structrual._03_Bridge.Example
+﻿namespace DesignPattern.Structural._03_Bridge.Example
 {
     public abstract class MailServiceAbstraction
     {
@@ -12,6 +12,10 @@
             _bridge.SendMessage(dto.Subject, dto.Message, dto.To);
         }
     }
+    public class RefiendMailService : MailServiceAbstraction
+    {
+
+    }
 
     public static class MailServiceProvider
     {
@@ -21,19 +25,14 @@
 
             bridge=provider.Trim().ToUpper() switch
             {
-                "GMAIL" => new GamilService(),
+                "GMAIL" => new GmailService(),
                 "YAHOO" => new YahooService(),
                 "SMS" => new SmsService(),
                 _=>new SmsService()
             };
 
-            return new GamilService();
+            return new GmailService();
         }
-    }
-
-    public class RefiendMailService : MailServiceAbstraction
-    {
-
     }
 
     public class RequestMessageDto

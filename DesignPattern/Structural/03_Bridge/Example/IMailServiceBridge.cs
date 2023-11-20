@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern.Structrual._03_Bridge.Example
+namespace DesignPattern.Structural._03_Bridge.Example
 {
     public interface IMailServiceBridge
     {
         void SendMessage(string subject, string message, string to);
     }
 
-    public class GamilService : IMailServiceBridge
+    public class GmailService : IMailServiceBridge
     {
         public void SendMessage(string subject, string message, string to)
         {

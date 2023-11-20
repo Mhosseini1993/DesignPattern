@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern.Structrual._01_Decorator.DecoratorVsInheritance.WithDecorator
+namespace DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithDecorator
 {
     public abstract class IWindow
     {

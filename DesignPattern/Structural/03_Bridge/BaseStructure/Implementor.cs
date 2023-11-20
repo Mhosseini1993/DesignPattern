@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DesignPattern.Structrual._03_Bridge.BaseStructure
+namespace DesignPattern.Structural._03_Bridge.BaseStructure
 {
     public abstract class Implementor
     {
