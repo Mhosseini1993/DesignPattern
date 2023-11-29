@@ -5,7 +5,7 @@
         private readonly IMailServiceBridge _bridge;
         public MailServiceAbstraction()
         {
-            _bridge=MailServiceProvider.GetProvider("gmail");
+            _bridge = MailServiceProvider.GetProvider("gmail");
         }
         public virtual void Send(RequestMessageDto dto)
         {
@@ -23,12 +23,12 @@
         {
             IMailServiceBridge bridge = null;
 
-            bridge=provider.Trim().ToUpper() switch
+            bridge = provider.Trim().ToUpper() switch
             {
                 "GMAIL" => new GmailService(),
                 "YAHOO" => new YahooService(),
                 "SMS" => new SmsService(),
-                _=>new SmsService()
+                _ => new SmsService()
             };
 
             return new GmailService();

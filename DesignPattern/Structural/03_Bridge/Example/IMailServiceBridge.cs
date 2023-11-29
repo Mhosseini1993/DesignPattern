@@ -34,4 +34,5 @@ namespace DesignPattern.Structural._03_Bridge.Example
             Console.WriteLine($"{message} Send to {to} with subject {subject} with {nameof(SmsService)}");
         }
     }
+
 }

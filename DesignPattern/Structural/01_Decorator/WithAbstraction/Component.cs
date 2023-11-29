@@ -48,5 +48,4 @@ namespace DesignPattern.Structural._01_Decorator.WithAbstraction
             Console.WriteLine("New Feature Added to class");
         }
     }
-
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithDecorator
 {
-    public abstract class IWindow
+    public interface IWindow
     {
-       public abstract void Draw();
+       void Draw();
     }
 
     public class Window : IWindow
     {
-        public override void Draw()
+        public  void Draw()
         {
             Console.WriteLine("Window Created!!!");
         }
@@ -27,7 +27,7 @@ namespace DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithDeco
         {
             this._win=window;
         }
-        public override void Draw()
+        public virtual void Draw()
         {
             _win.Draw();
         }

@@ -31,11 +31,12 @@ namespace DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithInhe
         }
     }
 
-    public class BorderedScrollableWindow:BorderedWindow
+    public class BorderedScrollableWindow:Window
     {
        public void MakeBorderAndScrollable()
         {
-            base.MakeBorder();
+            base.Draw();
+            Console.WriteLine("Border Added");
             Console.WriteLine("Scroll Added");
         }
     }
