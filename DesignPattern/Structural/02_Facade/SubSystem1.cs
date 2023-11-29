@@ -13,7 +13,6 @@ namespace DesignPattern.Structural._02_Facade
             Console.WriteLine($"{nameof(Action1)} called from {nameof(SubSystem1)}");
         }
     }
-
     public class SubSystem2
     {
         public void Action2()
@@ -21,8 +20,6 @@ namespace DesignPattern.Structural._02_Facade
             Console.WriteLine($"{nameof(Action2)} called from {nameof(SubSystem2)}");
         }
     }
-
-
     public class SubSystem3
     {
         public void Action3()
