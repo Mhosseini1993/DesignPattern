@@ -48,7 +48,6 @@
 //    ob.DoAction();
 #endregion
 
-
 #region Composite
 //using DesignPattern.Structural._05_Composite.BaseStructure;
 
@@ -74,34 +73,38 @@
 //composite.Display();
 
 
-//using DesignPattern.Structural._05_Composite.Example;
-//IComponent hardDisk = new Leaf("Hard Disk", 100000);
-//IComponent ram = new Leaf("RAM", 100000);
-//IComponent cpu = new Leaf("CPU", 200000);
+using DesignPattern.Creational._01_Prototype.DeepCopy;
+using DesignPattern.Creational._01_Prototype.ShallowCopy;
+using DesignPattern.Creational._02_Singletone.EagerInit;
+using DesignPattern.Structural._05_Composite.Example;
+IComponent hardDisk = new Leaf("Hard Disk", 100000);
+IComponent ram = new Leaf("RAM", 100000);
+IComponent cpu = new Leaf("CPU", 200000);
 
-//IComponent mouse = new Leaf("mouse", 50000);
-//IComponent keyboard = new Leaf("keyboard", 50000);
-//IComponent monitor = new Leaf("monitor", 400000);
+IComponent mouse = new Leaf("mouse", 50000);
+IComponent keyboard = new Leaf("keyboard", 50000);
+IComponent monitor = new Leaf("monitor", 400000);
 
-//IComponent motherBoard = new Composite("motherBoard", 100000);
-//IComponent Case = new Composite("Case", 70000);
-//IComponent periperal = new Composite("periperal", 0);
-//IComponent computer = new Composite("computer", 0);
+IComponent motherBoard = new Composite("motherBoard", 100000);
+IComponent Case = new Composite("Case", 70000);
+IComponent periperal = new Composite("periperal", 0);
+IComponent computer = new Composite("computer", 0);
 
-//motherBoard.Add(ram);
-//motherBoard.Add(cpu);
+motherBoard.Add(ram);
+motherBoard.Add(cpu);
 
-//Case.Add(hardDisk);
-//Case.Add(motherBoard);
+Case.Add(hardDisk);
+Case.Add(motherBoard);
 
-//periperal.Add(mouse);
-//periperal.Add(keyboard);
-//periperal.Add(monitor);
+periperal.Add(mouse);
+periperal.Add(keyboard);
+periperal.Add(monitor);
 
-//computer.Add(periperal);
-//computer.Add(Case);
+computer.Add(periperal);
+computer.Add(Case);
 
-//computer.GetPrice();
+computer.GetPrice();
 
 #endregion
+
 Console.ReadKey();

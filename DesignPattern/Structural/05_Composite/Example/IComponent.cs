@@ -10,12 +10,10 @@ namespace DesignPattern.Structural._05_Composite.Example
     {
         string Name { get; set; }
         int Price { get; set; }
-
         int GetPrice();
         void Add(IComponent component);
-      void Remove(IComponent component);
+        void Remove(IComponent component);
     }
-
     public class Composite : IComponent
     {
         public string Name { get; set; }
@@ -54,18 +52,15 @@ namespace DesignPattern.Structural._05_Composite.Example
             Name = name;
             Price = price;
         }
-
         public int GetPrice()
         {
             Console.WriteLine($"{Name} : {Price}");
             return Price;
         }
-
         public void Add(IComponent component)
         {
             throw new NotImplementedException();
         }
-
         public void Remove(IComponent component)
         {
             throw new NotImplementedException();
