@@ -11,8 +11,7 @@ namespace DesignPattern.Creational._02_Singletone.EagerInit
         private static readonly Singletone _instance = new Singletone();
         private Singletone()
         {
-            
         }
-        public static Singletone Instance() => _instance
+        public static Singletone Instance() => _instance;
     }
 }
