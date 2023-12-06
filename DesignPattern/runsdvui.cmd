@@ -1,0 +1,2 @@
+cd /d "C:\Users\Hosseini-mo\source\repos\DesignPattern\DesignPattern" &msbuild "DesignPattern.csproj" /t:sdvViewer /p:configuration="Debug" /p:platform="Any CPU" /p:SolutionDir="C:\Users\Hosseini-mo\source\repos\DesignPattern" 
+exit %errorlevel% 
