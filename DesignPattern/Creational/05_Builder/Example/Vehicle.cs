@@ -14,8 +14,7 @@ namespace DesignPattern.Creational._05_Builder.Example
         public Vehicle(string type)
         {
             Type = type;
-        }
-
+        }        
         public void AddPart(string partName, string partValue)
         {
             if (!parts.ContainsKey(partName))
@@ -35,6 +34,7 @@ namespace DesignPattern.Creational._05_Builder.Example
         public abstract void SetWheel();
         public abstract void SetFuel();
         public virtual Vehicle GetVehicle() => vehicle;
+
     }
 
     public class MotorCycleBuilder : VehicleBuilder
@@ -52,12 +52,10 @@ namespace DesignPattern.Creational._05_Builder.Example
         {
             vehicle.AddPart("Engine", "Mechanical");
         }
-
         public override void SetFrame()
         {
             throw new NotImplementedException();
         }
-
         public override void SetFuel()
         {
             vehicle.AddPart("Fuel", "None");
@@ -80,14 +78,13 @@ namespace DesignPattern.Creational._05_Builder.Example
         }
         public override void SetEngine()
         {
-            vehicle.AddPart("Engine", "Mechanical");
-        }
+            vehicle.AddPart("Engine", "Mechanical Engine");
 
+        }
         public override void SetFrame()
         {
             vehicle.AddPart("Frame", "Iron");
         }
-
         public override void SetFuel()
         {
             vehicle.AddPart("Fuel", "Gasoline");
@@ -105,6 +102,7 @@ namespace DesignPattern.Creational._05_Builder.Example
         {
             set
             {
+
                 _builder = value;
             }
         }
