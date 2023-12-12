@@ -31,7 +31,8 @@ namespace DesignPattern.Creational._03_FactoryMethod.BaseStructure
             Console.WriteLine($"{nameof(Operation)} called from {nameof(DefaultConcreteClass)}");
         }
     }
-
+    
+    
     public abstract class Creator
     {
         public abstract Product FactoryMethod(string config);

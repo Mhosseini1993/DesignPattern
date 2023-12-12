@@ -11,6 +11,7 @@ namespace DesignPattern.Creational._02_Singletone.LazyInit
         private static Singletone? _instance = null;
         private Singletone()
         {
+
         }
         public static Singletone Instance()
         {

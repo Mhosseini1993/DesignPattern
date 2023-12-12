@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
 #region Decorator
 //using DesignPattern.Structural._01_Decorator.DecoratorVsInheritance.WithDecorator;
 //using DesignPattern.Structural._01_Decorator.WithAbstraction;
@@ -73,9 +72,8 @@
 //composite.Display();
 
 
-using DesignPattern.Creational._01_Prototype.DeepCopy;
-using DesignPattern.Creational._01_Prototype.ShallowCopy;
-using DesignPattern.Creational._02_Singletone.EagerInit;
+using DesignPattern.Creational._05_Builder.BaseStructure;
+using DesignPattern.Creational._05_Builder.Example;
 using DesignPattern.Structural._05_Composite.Example;
 IComponent hardDisk = new Leaf("Hard Disk", 100000);
 IComponent ram = new Leaf("RAM", 100000);
@@ -107,6 +105,26 @@ computer.GetPrice();
 
 #endregion
 
+#region Builder
+//Director dir = new Director();
+//Builder b1 = new ConcreteBuilder1();
+//dir.SetBuilder(b1);
+//dir.Construct();
+//var tt = b1.GetProduct();
+
+//MotorCycleDirector motorCycleDirector = new MotorCycleDirector();
+//MotorCycleBuilder beneli = new MotorCycleBuilder();
+//motorCycleDirector.Builder=beneli;
+//motorCycleDirector.Construct();
+//var tt1 = beneli.GetVehicle();
+
+//CarDirector carDirector = new CarDirector();
+//SportCarBuilder z4 = new SportCarBuilder();
+//carDirector.Builder= z4;
+//carDirector.Construct();
+//var tt2 = z4.GetVehicle();
+
+#endregion
 
 
 Console.ReadKey();
