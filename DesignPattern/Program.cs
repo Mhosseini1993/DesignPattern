@@ -72,6 +72,8 @@
 //composite.Display();
 
 
+using DesignPattern.Behavioral._01_Strategy.BaseStructure;
+using DesignPattern.Behavioral._01_Strategy.Example;
 using DesignPattern.Creational._05_Builder.BaseStructure;
 using DesignPattern.Creational._05_Builder.Example;
 using DesignPattern.Structural._05_Composite.Example;
@@ -126,5 +128,34 @@ computer.GetPrice();
 
 #endregion
 
+#region Behavioral Design Pattern Usage
+
+#region Strategy
+//Context context;
+//context= new Context(new ConcreteClassA());
+//context.ApplyAlgorith();
+
+//context= new Context(new ConcreteClassB());
+//context.ApplyAlgorith();
+
+//context= new Context(new ConcreteClassC());
+//context.ApplyAlgorith();
+
+//var users = UserEntity.GetUsers() ;
+//foreach (var user in users)
+//{
+//    Console.WriteLine(user.ToString());
+//}
+//Console.WriteLine("*******************");
+//Array.Sort(users, new UserEntityFirstNameComparer());
+//foreach (var user in users)
+//{
+//    Console.WriteLine(user.ToString());
+//}
+
+#endregion
+
+
+#endregion
 
 Console.ReadKey();
