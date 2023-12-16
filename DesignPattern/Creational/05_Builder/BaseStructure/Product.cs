@@ -26,14 +26,8 @@ namespace DesignPattern.Creational._05_Builder.BaseStructure
 
     public abstract class Builder
     {
-        protected Product? _product;
-        public Product? Product
-        {
-            get
-            {
-                return _product;
-            }
-        }
+        protected Product _product;
+      
         public abstract void BuildPart1();
         public abstract void BuildPart2();
         public virtual Product GetProduct()

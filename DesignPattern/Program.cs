@@ -114,13 +114,13 @@ computer.GetPrice();
 
 //MotorCycleDirector motorCycleDirector = new MotorCycleDirector();
 //MotorCycleBuilder beneli = new MotorCycleBuilder();
-//motorCycleDirector.Builder=beneli;
+//motorCycleDirector.SetVehicleBuilder(beneli);
 //motorCycleDirector.Construct();
 //var tt1 = beneli.GetVehicle();
 
 //CarDirector carDirector = new CarDirector();
 //SportCarBuilder z4 = new SportCarBuilder();
-//carDirector.Builder= z4;
+//carDirector.SetVehicleBuilder(z4);
 //carDirector.Construct();
 //var tt2 = z4.GetVehicle();
 

@@ -8,9 +8,6 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Creational._04_AbstractFactory.BaseStructure.AbstractFactory
 {
-
-
-
     public interface IAbstractFactory
     {
         //for reach product we have to write a function and concrete class,

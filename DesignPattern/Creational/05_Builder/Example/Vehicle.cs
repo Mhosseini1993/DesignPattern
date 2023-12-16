@@ -1,11 +1,4 @@
-﻿using DesignPattern.Creational._05_Builder.BaseStructure;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DesignPattern.Creational._05_Builder.Example
+﻿namespace DesignPattern.Creational._05_Builder.Example
 {
     public class Vehicle
     {
@@ -14,7 +7,7 @@ namespace DesignPattern.Creational._05_Builder.Example
         public Vehicle(string type)
         {
             Type = type;
-        }        
+        }
         public void AddPart(string partName, string partValue)
         {
             if (!parts.ContainsKey(partName))
@@ -43,7 +36,10 @@ namespace DesignPattern.Creational._05_Builder.Example
         {
             vehicle=new Vehicle("MotorCycle");
         }
-
+        public override void SetFrame()
+        {
+            throw new NotImplementedException();
+        }
         public override void SetDoor()
         {
             vehicle.AddPart("Door", "None");
@@ -51,10 +47,6 @@ namespace DesignPattern.Creational._05_Builder.Example
         public override void SetEngine()
         {
             vehicle.AddPart("Engine", "Mechanical");
-        }
-        public override void SetFrame()
-        {
-            throw new NotImplementedException();
         }
         public override void SetFuel()
         {
@@ -98,13 +90,9 @@ namespace DesignPattern.Creational._05_Builder.Example
     public class MotorCycleDirector
     {
         private VehicleBuilder _builder;
-        public VehicleBuilder Builder
+        public void SetVehicleBuilder(VehicleBuilder builder)
         {
-            set
-            {
-
-                _builder = value;
-            }
+            _builder = builder;
         }
 
         public void Construct()
@@ -118,12 +106,9 @@ namespace DesignPattern.Creational._05_Builder.Example
     public class CarDirector
     {
         private VehicleBuilder _builder;
-        public VehicleBuilder Builder
+        public void SetVehicleBuilder(VehicleBuilder builder)
         {
-            set
-            {
-                _builder = value;
-            }
+            _builder = builder;
         }
 
         public void Construct()
