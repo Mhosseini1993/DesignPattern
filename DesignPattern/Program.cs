@@ -72,38 +72,33 @@
 //composite.Display();
 
 
-using DesignPattern.Behavioral._01_Strategy.BaseStructure;
-using DesignPattern.Behavioral._01_Strategy.Example;
-using DesignPattern.Creational._05_Builder.BaseStructure;
-using DesignPattern.Creational._05_Builder.Example;
-using DesignPattern.Structural._05_Composite.Example;
-IComponent hardDisk = new Leaf("Hard Disk", 100000);
-IComponent ram = new Leaf("RAM", 100000);
-IComponent cpu = new Leaf("CPU", 200000);
+//IComponent hardDisk = new Leaf("Hard Disk", 100000);
+//IComponent ram = new Leaf("RAM", 100000);
+//IComponent cpu = new Leaf("CPU", 200000);
 
-IComponent mouse = new Leaf("mouse", 50000);
-IComponent keyboard = new Leaf("keyboard", 50000);
-IComponent monitor = new Leaf("monitor", 400000);
+//IComponent mouse = new Leaf("mouse", 50000);
+//IComponent keyboard = new Leaf("keyboard", 50000);
+//IComponent monitor = new Leaf("monitor", 400000);
 
-IComponent motherBoard = new Composite("motherBoard", 100000);
-IComponent Case = new Composite("Case", 70000);
-IComponent periperal = new Composite("periperal", 0);
-IComponent computer = new Composite("computer", 0);
+//IComponent motherBoard = new Composite("motherBoard", 100000);
+//IComponent Case = new Composite("Case", 70000);
+//IComponent periperal = new Composite("periperal", 0);
+//IComponent computer = new Composite("computer", 0);
 
-motherBoard.Add(ram);
-motherBoard.Add(cpu);
+//motherBoard.Add(ram);
+//motherBoard.Add(cpu);
 
-Case.Add(hardDisk);
-Case.Add(motherBoard);
+//Case.Add(hardDisk);
+//Case.Add(motherBoard);
 
-periperal.Add(mouse);
-periperal.Add(keyboard);
-periperal.Add(monitor);
+//periperal.Add(mouse);
+//periperal.Add(keyboard);
+//periperal.Add(monitor);
 
-computer.Add(periperal);
-computer.Add(Case);
+//computer.Add(periperal);
+//computer.Add(Case);
 
-computer.GetPrice();
+//computer.GetPrice();
 
 #endregion
 
@@ -155,6 +150,9 @@ computer.GetPrice();
 
 #endregion
 
+#region TemplateMethod
+//DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.Client.Run(new DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.ConcreteClass());
+#endregion
 
 #endregion
 

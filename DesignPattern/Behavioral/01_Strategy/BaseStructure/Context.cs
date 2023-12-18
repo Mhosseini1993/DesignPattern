@@ -7,7 +7,7 @@
         {
             this._strategy=strategy;
         }
-        public void ApplyAlgorith()
+        public void ApplyAlgorithm()
         {
             _strategy.AbstractAlgorithm();
         }
