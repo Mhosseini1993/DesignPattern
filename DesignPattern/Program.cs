@@ -154,6 +154,13 @@
 //DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.Client.Run(new DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.ConcreteClass());
 #endregion
 
+#region ChainOfResponsibilityClient
+//using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithAbstract;
+//using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithInterface;
+//ChainOfResponsibility.Run();
 #endregion
+
+#endregion
+
 
 Console.ReadKey();

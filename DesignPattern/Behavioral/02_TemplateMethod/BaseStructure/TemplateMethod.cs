@@ -16,7 +16,6 @@
     }
     public class ConcreteClass : TemplateMethod
     {
-      
         protected override void PrimitiveOperation1()
         {
             Console.WriteLine($"{nameof(PrimitiveOperation1)} run ...");
