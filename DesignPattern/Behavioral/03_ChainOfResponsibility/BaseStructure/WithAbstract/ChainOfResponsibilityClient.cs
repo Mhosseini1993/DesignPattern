@@ -4,8 +4,8 @@
     {
         public static void Run()
         {
-            Handler handler2 = new ConcreteHandler2();
             Handler handler1 = new ConcreteHandler1();
+            Handler handler2 = new ConcreteHandler2();
             
             handler1.SetSuccessor(handler2);
             handler2.SetSuccessor(null);
