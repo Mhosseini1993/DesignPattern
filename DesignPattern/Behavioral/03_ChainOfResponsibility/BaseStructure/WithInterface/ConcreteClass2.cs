@@ -3,20 +3,20 @@
     public class ConcreteClass2 : IHandler
     {
         public IHandler Successor { get; set; }
-        public ConcreteClass2(IHandler handler)
+        public IHandler SetSuccessor(IHandler successor)
         {
-            Successor=handler;
+            Successor = successor;
+            return Successor;
         }
-
         public void HandleRequest(int requestId)
         {
             if (requestId>=50)
             {
                 Console.WriteLine($"{requestId} processed by {nameof(ConcreteClass2)}");
             }
-            else if (Successor!=null)
+            else 
             {
-                Successor.HandleRequest(requestId);
+                Successor?.HandleRequest(requestId);
             }
         }
     }

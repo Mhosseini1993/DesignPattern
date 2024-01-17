@@ -31,10 +31,11 @@
             Console.WriteLine($"{nameof(PrimitiveOperation3)} run...");
         }
     }
-    public static class Client
+    public static class TemplateMethodClient
     {
-        public static void Run(TemplateMethod templateMethod)
+        public static void Run()
         {
+            TemplateMethod templateMethod = new ConcreteClass();
             templateMethod.TemplateOperation();
         }
     }

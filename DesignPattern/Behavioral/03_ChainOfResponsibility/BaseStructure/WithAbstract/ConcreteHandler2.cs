@@ -8,9 +8,9 @@
             {
                 Console.WriteLine($"{request} processed by {nameof(ConcreteHandler2)}");
             }
-            else if (Successor!=null)
+            else
             {
-                Successor.HandleRequest(request);
+                Successor?.HandleRequest(request);
             }
         }
     }

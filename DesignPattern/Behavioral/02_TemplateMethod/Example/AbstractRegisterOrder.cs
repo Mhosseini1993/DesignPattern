@@ -44,11 +44,17 @@ namespace DesignPattern.Behavioral._02_TemplateMethod.Example
             Console.WriteLine($"Message {message} from {from} send to {to} with SMS");
         }
     }
-    public class Client
+    public class AbstractRegisterOrderClient
     {
         public static void Run(AbstractRegisterOrder order)
         {
+            AbstractRegisterOrder registerOrder;
+            registerOrder= new EmailSendNotification();
             order.Execute("mhosseinisru@gmail.com", "test", "Hello word");
+
+
+            registerOrder= new SmsSendNotification();
+            order.Execute("09358758908", "test", "Hello word");
         }
     }
 }

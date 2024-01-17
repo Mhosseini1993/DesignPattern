@@ -1,23 +1,25 @@
-﻿namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithInterface
+﻿using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithAbstract;
+
+namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithInterface
 {
     public class ConcreteClass1 : IHandler
     {
         public IHandler Successor { get; set; }
 
-        public ConcreteClass1(IHandler handler)
+        public IHandler SetSuccessor(IHandler successor)
         {
-            Successor = handler;
+            Successor = successor;
+            return Successor;
         }
-
         public void HandleRequest(int requestId)
         {
             if (requestId<50)
             {
                 Console.WriteLine($"{requestId} processed by {nameof(ConcreteClass1)}");
             }
-            else if (Successor!=null)
+            else 
             {
-                Successor.HandleRequest(requestId);
+                Successor?.HandleRequest(requestId);
             }
         }
     }

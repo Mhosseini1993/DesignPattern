@@ -1,24 +1,26 @@
 ﻿using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Example.Model;
 using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Example.Service;
-using System;
-using System.Collections.Generic;
-using System.Formats.Asn1;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Example.Concretes
 {
-    public class CreateOrder : IHandler
+    public class CheckUserActiveStatus : IHandler
     {
         public override ResponseContext Execute(RequestContext requestContext)
         {
-            bool orderCreated = true;
-            if (orderCreated)
+            if (requestContext.UserId!=1)
+            {
+                Console.WriteLine("User is not active");
+                return new ResponseContext()
+                {
+                    IsSuccess=false,
+                    Message="User is not active"
+                };
+            }
+            else
             {
                 if (Successor!=null)
                 {
-                    Console.WriteLine($"Order Created at {DateTime.Now} and send to {Successor.GetType().Name}");
+                    Console.WriteLine($"User is Active and send to {Successor.GetType().Name}");
                     return Successor.Execute(requestContext);
                 }
                 else
@@ -26,18 +28,9 @@ namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Examp
                     return new ResponseContext()
                     {
                         IsSuccess = false,
-                        Message=$"Order Created successfully at {DateTime.Now}"
+                        Message="Error"
                     };
                 }
-            }
-            else
-            {
-                Console.WriteLine($"Order Created failed {DateTime.Now}");
-                return new ResponseContext()
-                {
-                    IsSuccess = false,
-                    Message="Order Failed to created"
-                };
             }
         }
     }

@@ -8,11 +8,12 @@ namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithA
 {
     public abstract class Handler
     {
-        protected Handler Successor;
+        protected Handler? Successor;
 
-        public void SetSuccessor(Handler successor)
+        public Handler SetSuccessor(Handler successor)
         {
             this.Successor = successor;
+            return Successor;
         }
         public abstract void HandleRequest(int request);
     }

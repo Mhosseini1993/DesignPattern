@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Example.Service
 {
-
     public abstract class IHandler
     {
-        protected IHandler Successor { get; set; }
+        protected IHandler? Successor { get; set; }
         public IHandler SetSuccessor(IHandler handler)
         {
             Successor = handler;

@@ -6,9 +6,9 @@
         {
             Handler handler1 = new ConcreteHandler1();
             Handler handler2 = new ConcreteHandler2();
-            
+
             handler1.SetSuccessor(handler2);
-            handler2.SetSuccessor(null);
+            
 
             handler1.HandleRequest(40);
             handler1.HandleRequest(100);

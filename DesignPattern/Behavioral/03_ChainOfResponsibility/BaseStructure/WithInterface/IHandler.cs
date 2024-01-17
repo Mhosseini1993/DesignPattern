@@ -9,6 +9,7 @@ namespace DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithI
     public interface IHandler
     {
         IHandler Successor { get; set; }
+        IHandler SetSuccessor(IHandler successor);
         void HandleRequest(int requestId);
     }
 }

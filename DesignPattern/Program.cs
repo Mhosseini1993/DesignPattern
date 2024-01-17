@@ -126,44 +126,14 @@
 #region Behavioral Design Pattern Usage
 
 #region Strategy
-//Context context;
-//context= new Context(new ConcreteClassA());
-//context.ApplyAlgorith();
-
-//context= new Context(new ConcreteClassB());
-//context.ApplyAlgorith();
-
-//context= new Context(new ConcreteClassC());
-//context.ApplyAlgorith();
-
-//var users = UserEntity.GetUsers() ;
-//foreach (var user in users)
-//{
-//    Console.WriteLine(user.ToString());
-//}
-//Console.WriteLine("*******************");
-//Array.Sort(users, new UserEntityFirstNameComparer());
-//foreach (var user in users)
-//{
-//    Console.WriteLine(user.ToString());
-//}
 
 #endregion
 
 #region TemplateMethod
-//DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.Client.Run(new DesignPattern.Behavioral._02_TemplateMethod.BaseStructure.ConcreteClass());
 #endregion
 
 #region ChainOfResponsibilityClient
-//using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithAbstract;
-//using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.WithInterface;
-//ChainOfResponsibility.Run();
 #endregion
-
-
-using DesignPattern.Behavioral._03_ChainOfResponsibility.BaseStructure.Example.Concretes;
-
-UberClient.Run();
 
 #endregion
 
