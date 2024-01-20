@@ -135,6 +135,13 @@
 #region ChainOfResponsibilityClient
 #endregion
 
+
+#region Command
+using DesignPattern.Behavioral._04_Command.BaseStructure;
+
+CommandClient.Run();
+
+#endregion
 #endregion
 
 
