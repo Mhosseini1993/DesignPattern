@@ -137,11 +137,15 @@
 
 
 #region Command
-using DesignPattern.Behavioral._04_Command.BaseStructure;
-
-CommandClient.Run();
-
+//DesignPattern.Behavioral._04_Command.BaseStructure.WithAbstract.CommandClient.Run();
+//DesignPattern.Behavioral._04_Command.BaseStructure.WithInterface.CommandClient.Run();
 #endregion
+
+using DesignPattern.Behavioral._05_Memento;
+
+MementoClient.Run();
+
+
 #endregion
 
 

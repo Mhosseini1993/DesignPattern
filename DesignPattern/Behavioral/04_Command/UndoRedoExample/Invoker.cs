@@ -24,7 +24,6 @@
             string res = commands[index].Execute(commands[index].currentText);
             index+=1;
             return res;
-
         }
         public string Undo()
         {
