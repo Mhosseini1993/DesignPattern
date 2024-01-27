@@ -2,11 +2,10 @@
 {
     public class Memento
     {
-        private string _state;
+        public string State { get; private set; }
         public Memento(string state)
         {
-            this._state = state;
+            this.State = state;
         }
-        public string State { get { return _state; } private set { } }
     }
 }

@@ -141,9 +141,12 @@
 //DesignPattern.Behavioral._04_Command.BaseStructure.WithInterface.CommandClient.Run();
 #endregion
 
-using DesignPattern.Behavioral._05_Memento;
-
-MementoClient.Run();
+#region Memento
+//using DesignPattern.Behavioral._05_Memento;
+//MementoClient.Run();
+#endregion
+using DesignPattern.Behavioral._06_Observer.BaseStructure.WithInterface;
+ObserverClient.Run();
 
 
 #endregion
